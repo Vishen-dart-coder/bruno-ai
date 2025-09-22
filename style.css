@@ -1,0 +1,37 @@
+/* Tech vibe dark neon UI */ 
+
+@import url('https://fonts.googleapis.com/css2?family=Orbitron:wght@500&family=Roboto+Mono&display=swap'); 
+
+body { margin: 0; font-family: 'Roboto Mono', monospace; background: #0f1218; color: #00fff7; display: flex; flex-direction: column; height: 100vh; overflow: hidden; } 
+
+#top-bar { height: 56px; background: #01111a; display: flex; align-items: center; padding: 0 24px; box-shadow: 0 0 15px #00fff7aa; position: fixed; width: 100%; top: 0; left: 0; z-index: 1000; } 
+
+#logo { display: flex; align-items: center; gap: 10px; font-family: 'Orbitron', sans-serif; font-weight: 500; font-size: 1.3rem; color: #00fff7; text-shadow: 0 0 5px #00fff7, 0 0 10px #00fff7, 0 0 20px #00fff7; user-select: none; } 
+
+#chat-container { flex-grow: 1; margin-top: 56px; /* to not hide behind top bar */ background: #121923; width: 90vw; max-width: 700px; margin-left: auto; margin-right: auto; border-radius: 12px; display: flex; flex-direction: column; box-shadow: 0 0 30px #00fff7bb, inset 0 0 60px #00fff7bb; height: calc(100vh - 72px); overflow: hidden; } 
+
+#chat-log { flex-grow: 1; padding: 20px 24px; overflow-y: auto; display: flex; flex-direction: column; gap: 16px; scrollbar-width: thin; scrollbar-color: #00fff7 #0f1218; } 
+
+#chat-log::-webkit-scrollbar { width: 8px; } 
+
+#chat-log::-webkit-scrollbar-thumb { background-color: #00fff7cc; border-radius: 10px; } 
+
+.message { max-width: 75%; padding: 14px 20px; border-radius: 20px; font-family: 'Roboto Mono', monospace; font-size: 1rem; line-height: 1.5; user-select: text; white-space: pre-wrap; box-shadow: 0 0 8px #00fff7aa; transition: box-shadow 0.3s ease; } 
+
+.message.user { background: #00fff7; color: #0f1218; align-self: flex-end; border-bottom-right-radius: 4px; box-shadow: 0 0 20px #00fff7cc, 0 0 40px #00fff7dd; } 
+
+.message.bot { background: #01111a; color: #00fff7; align-self: flex-start; border-bottom-left-radius: 4px; text-shadow: 0 0 5px #00fff7bb; } 
+
+.message:hover { box-shadow: 0 0 25px #00fff7ee, 0 0 45px #00fff7ff; } 
+
+#input-form { display: flex; padding: 14px 24px; background: #01111a; border-top: 1px solid #00fff7aa; box-shadow: inset 0 0 15px #00fff7aa; } 
+
+#user-input { flex-grow: 1; font-family: 'Roboto Mono', monospace; font-size: 1rem; padding: 14px 20px; border: none; border-radius: 30px; background: #0f1218; color: #00fff7; box-shadow: inset 0 0 15px #00fff7bb; transition: box-shadow 0.3s ease; } 
+
+#user-input::placeholder { color: #00fff799; } 
+
+#user-input:focus { outline: none; box-shadow: 0 0 15px #00fff7ff, inset 0 0 30px #00fff7ff; } 
+
+button { margin-left: 12px; background: #00fff7; border: none; color: #0f1218; font-weight: 700; padding: 0 24px; border-radius: 30px; cursor: pointer; font-family: 'Orbitron', sans-serif; font-size: 1.05rem; text-transform: uppercase; letter-spacing: 1.2px; box-shadow: 0 0 20px #00fff7cc; transition: background 0.3s ease, box-shadow 0.3s ease; } 
+
+button:hover { background: #00e9d4; box-shadow: 0 0 30px #00fff7ff, 0 0 50px #00fff7ff; } 
